@@ -4,6 +4,7 @@ import { IoMdAdd } from "react-icons/io";
 import NavBar from '../../Components/NavBar/NavBar';
 import '../PostManagement/AddNewPost.css'; // Import the CSS file
 
+// Function to fetch user details from the server
 function UpdateUserProfile() {
   const { id } = useParams();
   const [formData, setFormData] = useState({
@@ -36,6 +37,7 @@ function UpdateUserProfile() {
     });
   };
 
+  // Fetch user data when the component mounts or when the ID changes
   useEffect(() => {
     fetch(`http://localhost:8080/user/${id}`)
       .then((response) => {
@@ -123,7 +125,7 @@ function UpdateUserProfile() {
       setIsUploading(false);
     }
   };
-
+// Function to get the profile image URL
   const getProfileImageUrl = () => {
     if (previewImage) return previewImage;
     if (formData.profilePicturePath) {
