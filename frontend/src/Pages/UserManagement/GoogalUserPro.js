@@ -21,6 +21,8 @@ export const fetchUserDetails = async (userId) => {
     }
 };
 
+// Function to fetch user profile image from the server
+// function fetchUserProfileImage(userId) {
 function GoogalUserPro() {
     const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
