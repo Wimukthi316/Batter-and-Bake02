@@ -45,7 +45,7 @@ function NavBar() {
             setGoogleProfileImage(googleImage);
         } else if (userId) {
             fetchUserDetails(userId).then((data) => {
-                if (data && data.profilePicturePath) {
+                if (data && data.profilePicturePath) { // Fetch user profile image
                     setUserProfileImage(`http://localhost:8080/uploads/profile/${data.profilePicturePath}`);
                 }
             });
@@ -72,7 +72,7 @@ function NavBar() {
         window.location.href = path;
         setMobileMenuOpen(false);
     };
-
+    // Function to handle logout
     return (
         <header className={`sleek-navbar ${isVisible ? 'visible' : 'hidden'}`}>
             <div className="sleek-container">
