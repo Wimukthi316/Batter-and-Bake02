@@ -4,6 +4,7 @@ import { FaEnvelope, FaPhone, FaTools, FaUserEdit, FaTrash, FaBookOpen, FaLightb
 import './UserProfile.css'
 import NavBar from '../../Components/NavBar/NavBar';
 
+// Function to fetch user details from the server
 export const fetchUserDetails = async (userId) => {
     try {
         const response = await fetch(`http://localhost:8080/user/${userId}`);
@@ -19,6 +20,7 @@ export const fetchUserDetails = async (userId) => {
     }
 };
 
+// Function to fetch user profile image from the server
 function UserProfile() {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);
