@@ -3,6 +3,7 @@ import axios from 'axios';
 import NavBar from '../../Components/NavBar/NavBar';
 import './AddNewPost.css'; // We'll create this CSS file
 
+// This component allows users to create a new post with a title, description, category, and media (images/videos).
 function AddNewPost() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
