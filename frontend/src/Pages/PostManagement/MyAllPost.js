@@ -16,6 +16,7 @@ import { FaCommentAlt } from "react-icons/fa";
 import './AllPostModern.css'; // Import the modern styling
 Modal.setAppElement('#root');
 
+// This component allows users to view, edit, delete, and comment on their posts. It also includes a follow/unfollow feature for other users.
 function MyAllPost() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
