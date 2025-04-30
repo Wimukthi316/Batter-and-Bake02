@@ -35,7 +35,7 @@ function UserProfile() {
                 .finally(() => setLoading(false));
         }
     }, []);
-
+    // Fetch user type from local storage and set profile image accordingly
     const handleDelete = () => {
         if (window.confirm("Are you sure you want to delete your profile?")) {
             const userId = localStorage.getItem('userID');
