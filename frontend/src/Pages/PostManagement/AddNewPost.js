@@ -86,7 +86,7 @@ function AddNewPost() {
       window.location.reload();
     }
   };
-
+  // This function handles the form submission, sending the post data to the server.
   return (
     <div className="post-creation-page">
       <NavBar />
