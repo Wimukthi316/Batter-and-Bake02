@@ -76,7 +76,7 @@ function UserLogin() {
             <h2>Sign In</h2>
             <p>Please sign in to continue to Flavora</p>
           </div>
-
+          
           <form onSubmit={handleSubmit} className="login-form">
             <div className="form-group">
               <label htmlFor="email">Email</label>

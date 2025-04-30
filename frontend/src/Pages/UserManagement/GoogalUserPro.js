@@ -41,7 +41,7 @@ function GoogalUserPro() {
                 .finally(() => setLoading(false));
         }
     }, []);
-    
+    // Fetch user type from local storage and set profile image accordingly
     useEffect(() => {
         const storedUserType = localStorage.getItem('userType');
         setUserType(storedUserType);
