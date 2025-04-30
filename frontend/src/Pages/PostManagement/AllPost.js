@@ -65,7 +65,7 @@ function AllPost() {
         console.error('Error fetching posts:', error);
       }
     };
-
+// Fetch posts and user details on component mount
     fetchPosts();
   }, []);
 
