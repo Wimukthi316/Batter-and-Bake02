@@ -12,7 +12,7 @@ function AddNewPost() {
   const [categories, setCategories] = useState('');
   const [isDragging, setIsDragging] = useState(false);
   const userID = localStorage.getItem('userID');
-
+  // Assuming userID is stored in localStorage after login
   const handleMediaChange = (e) => {
     const files = Array.from(e.target.files || e.dataTransfer.files);
     const maxFileSize = 50 * 1024 * 1024; // 50MB
