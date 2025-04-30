@@ -114,7 +114,7 @@ function AllPost() {
     }
     setShowMyPosts(!showMyPosts);
   };
-
+// Function to handle liking a post
   const handleLike = async (postId) => {
     const userID = localStorage.getItem('userID');
     if (!userID) {
