@@ -66,7 +66,7 @@ function UserProfile() {
             </div>
         );
     }
-
+    // Check if userData is null or undefined
     return (
         <div className="page-container">
             <NavBar />
