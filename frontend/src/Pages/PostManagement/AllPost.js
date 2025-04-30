@@ -29,7 +29,7 @@ function AllPost() {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
   const loggedInUserID = localStorage.getItem('userID');
-
+// Assuming userID is stored in localStorage after login
   useEffect(() => {
     const fetchPosts = async () => {
       try {
