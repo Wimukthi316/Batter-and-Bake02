@@ -85,7 +85,7 @@ function UpdateLearningPost() {
       }
       if (url.includes('youtu.be/')) {
         const videoId = url.split('youtu.be/')[1];
-        return `https://www.youtube.com/embed/${videoId}`;
+        return `https://www.youtube.com/embed/${videoId}`;// Extract video ID from the URL
       }
       return url;
     } catch (error) {
@@ -97,13 +97,13 @@ function UpdateLearningPost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    // Prevent multiple submissions
     if (startDate === endDate) {
       alert("Start date and end date cannot be the same.");
       setIsSubmitting(false);
       return;
     }
-
+    // Check if start date is greater than end date
     if (startDate > endDate) {
       alert("Start date cannot be greater than end date.");
       setIsSubmitting(false);
@@ -111,7 +111,7 @@ function UpdateLearningPost() {
     }
 
     let imageUrl = existingImage;
-
+    // Use existing image URL if no new image is uploaded
     if (image) {
       const formData = new FormData();
       formData.append('file', image);
