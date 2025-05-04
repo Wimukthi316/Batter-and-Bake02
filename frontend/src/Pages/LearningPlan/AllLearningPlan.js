@@ -7,7 +7,7 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import { IoIosCreate } from "react-icons/io";
 import NavBar from '../../Components/NavBar/NavBar';
 import { HiCalendarDateRange } from "react-icons/hi2";
-
+// import { useNavigate } from 'react-router-dom';
 function AllLearningPlan() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
@@ -136,7 +136,7 @@ function AllLearningPlan() {
                 <div className='name_section_post'>
                   <p className='name_section_post_owner_name'>{post.postOwnerName}</p>
                 </div>
-                
+
               </div>
               {post.postOwnerID === localStorage.getItem('userID') && (
                 <div className='action_btn_icon_post'>
@@ -190,7 +190,7 @@ function AllLearningPlan() {
                 <div className='name_section_post'>
                   <p className='name_section_post_owner_name'>{post.postOwnerName}</p>
                 </div>
-                
+
               </div>
               {post.postOwnerID === localStorage.getItem('userID') && (
                 <div className='action_btn_icon_post'>
@@ -252,8 +252,8 @@ function AllLearningPlan() {
             value={searchOwnerName}
             onChange={handleSearch}
           />
-          <button 
-            className="create-button" 
+          <button
+            className="create-button"
             style={{ background: "linear-gradient(45deg, #a18cd1 0%, #fbc2eb 100%)" }}
             onClick={() => (window.location.href = '/addLearningPlan')}
           >
@@ -267,7 +267,7 @@ function AllLearningPlan() {
               <div className="empty-icon"></div>
               <h3>No learning plans found</h3>
               <p>Create a new learning plan to share with the community</p>
-              <button 
+              <button
                 className="primary-button"
                 style={{ background: "linear-gradient(45deg, #a18cd1 0%, #fbc2eb 100%)", color: "white" }}
                 onClick={() => (window.location.href = '/addLearningPlan')}
