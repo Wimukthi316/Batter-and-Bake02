@@ -51,7 +51,7 @@ function NotificationsPage() {
       console.error('Error deleting notification:', error);
     }
   };
-
+// Function to handle delete action
   return (
     <div className="notifications-page">
       <NavBar />
