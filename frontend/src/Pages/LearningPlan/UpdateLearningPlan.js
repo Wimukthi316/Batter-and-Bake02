@@ -28,7 +28,7 @@ function UpdateLearningPost() {
     const fetchPost = async () => {
       try {
         const response = await axios.get(`http://localhost:8080/learningPlan/${id}`);// Fetch the post data using the ID from the URL
-        const { title, description, contentURL, tags, imageUrl, templateID, startDate, endDate, category } = response.data;
+        const { title, description, contentURL, tags, imageUrl, templateID, startDate, endDate, category } = response.data;// Destructure the response data
         setTitle(title);
         setDescription(description);
         setContentURL(contentURL);
@@ -45,7 +45,7 @@ function UpdateLearningPost() {
 
     fetchPost();
   }, [id]);
-
+// Fetch the post data when the component mounts
   const handleAddTag = () => {
     if (tagInput.trim() !== '') {
       setTags([...tags, tagInput.trim()]);
@@ -66,12 +66,12 @@ function UpdateLearningPost() {
         alert(`File ${file.name} exceeds the maximum size of 50MB.`);
         return;
       }
-      
+
       if (!file.type.startsWith('image/')) {
         alert('Please upload an image file.');
         return;
       }
-      
+
       setImage(file);
       setImagePreview(URL.createObjectURL(file));
     }
@@ -150,7 +150,7 @@ function UpdateLearningPost() {
         <div className="post-form-card">
           <h1 className="form-title">Update Learning Plan</h1>
           <p className="form-subtitle">Refine your learning journey with the community</p>
-          
+
           <form onSubmit={handleSubmit} className="modern-form">
             <div className="form-group">
               <label className="form-label">Title</label>
@@ -163,7 +163,7 @@ function UpdateLearningPost() {
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Category</label>
               <select
@@ -184,7 +184,7 @@ function UpdateLearningPost() {
                 <option value="Fusion Recipes">Fusion Recipes</option>
               </select>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Description</label>
               <textarea
@@ -196,7 +196,7 @@ function UpdateLearningPost() {
                 rows={4}
               />
             </div>
-            
+
             <div className="form-group date-range-container">
               <div className="date-field">
                 <label className="form-label">Start Date</label>
@@ -219,7 +219,7 @@ function UpdateLearningPost() {
                 />
               </div>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Template Style</label>
               <select
@@ -245,7 +245,7 @@ function UpdateLearningPost() {
                 onChange={(e) => setContentURL(e.target.value)}
               />
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Tags</label>
               <div className="tags-container">
@@ -269,8 +269,8 @@ function UpdateLearningPost() {
                     }
                   }}
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="tag-add-button"
                   onClick={handleAddTag}
                 >
@@ -278,15 +278,15 @@ function UpdateLearningPost() {
                 </button>
               </div>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Featured Image</label>
-              <div 
+              <div
                 className={`media-drop-area ${(imagePreview || existingImage) ? 'has-preview' : ''}`}
                 onDragOver={(e) => {
                   e.preventDefault();
                 }}
-                onDragLeave={() => {}}
+                onDragLeave={() => { }}
                 onDrop={(e) => {
                   e.preventDefault();
                   handleImageChange(e);
@@ -354,11 +354,11 @@ function UpdateLearningPost() {
                       <span key={index} className="tagname">#{tag}</span>
                     ))}
                   </div>
-                  {(imagePreview || existingImage) && 
-                    <img 
-                      src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`} 
-                      alt="Preview" 
-                      className="iframe_preview" 
+                  {(imagePreview || existingImage) &&
+                    <img
+                      src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`}
+                      alt="Preview"
+                      className="iframe_preview"
                     />
                   }
                   {contentURL && (
@@ -385,11 +385,11 @@ function UpdateLearningPost() {
                   </div>
                   <div className='preview_part'>
                     <div className='preview_part_sub'>
-                      {(imagePreview || existingImage) && 
-                        <img 
-                          src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`} 
-                          alt="Preview" 
-                          className="iframe_preview_new" 
+                      {(imagePreview || existingImage) &&
+                        <img
+                          src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`}
+                          alt="Preview"
+                          className="iframe_preview_new"
                         />
                       }
                     </div>
@@ -408,11 +408,11 @@ function UpdateLearningPost() {
                 </div>
                 <div className={`template template-3 ${templateID === 3 ? 'selected' : ''}`}>
                   <p className='template_id_one'>template 3</p>
-                  {(imagePreview || existingImage) && 
-                    <img 
-                      src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`} 
-                      alt="Preview" 
-                      className="iframe_preview" 
+                  {(imagePreview || existingImage) &&
+                    <img
+                      src={imagePreview || `http://localhost:8080/learningPlan/planImages/${existingImage}`}
+                      alt="Preview"
+                      className="iframe_preview"
                     />
                   }
                   {contentURL && (
@@ -437,9 +437,9 @@ function UpdateLearningPost() {
                 </div>
               </div>
             </div>
-            
-            <button type="submit" className="submit-button" style={{ 
-              background: "linear-gradient(90deg, #6366f1, #8b5cf6)" 
+
+            <button type="submit" className="submit-button" style={{
+              background: "linear-gradient(90deg, #6366f1, #8b5cf6)"
             }} disabled={isSubmitting}>
               <span className="button-text">{isSubmitting ? 'Updating...' : 'Update Learning Plan'}</span>
               <span className="button-icon">→</span>
