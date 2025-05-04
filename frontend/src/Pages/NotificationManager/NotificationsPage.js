@@ -33,7 +33,7 @@ function NotificationsPage() {
       setLoading(false);
     }
   }, [userId]);
-
+// Fetch notifications when the component mounts
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
