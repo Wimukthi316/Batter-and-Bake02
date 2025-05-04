@@ -6,6 +6,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import { MdOutlineMarkChatRead } from "react-icons/md";
 import { IoNotificationsOutline } from "react-icons/io5";
 
+// Function to fetch user notifications from the server
 function NotificationsPage() {
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
