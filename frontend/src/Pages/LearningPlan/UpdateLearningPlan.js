@@ -45,7 +45,7 @@ function UpdateLearningPost() {
 
     fetchPost();
   }, [id]);
-// Fetch the post data when the component mounts
+  // Fetch the post data when the component mounts
   const handleAddTag = () => {
     if (tagInput.trim() !== '') {
       setTags([...tags, tagInput.trim()]);
@@ -81,7 +81,7 @@ function UpdateLearningPost() {
     try {
       if (url.includes('youtube.com/watch')) {
         const videoId = new URL(url).searchParams.get('v');
-        return `https://www.youtube.com/embed/${videoId}`;
+        return `https://www.youtube.com/embed/${videoId}`;// Extract video ID from the URL
       }
       if (url.includes('youtu.be/')) {
         const videoId = url.split('youtu.be/')[1];
