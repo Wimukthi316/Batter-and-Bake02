@@ -27,7 +27,7 @@ function UpdateLearningPost() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/learningPlan/${id}`);
+        const response = await axios.get(`http://localhost:8080/learningPlan/${id}`);// Fetch the post data using the ID from the URL
         const { title, description, contentURL, tags, imageUrl, templateID, startDate, endDate, category } = response.data;
         setTitle(title);
         setDescription(description);
