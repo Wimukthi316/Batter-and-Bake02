@@ -8,7 +8,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import { FaVideo } from "react-icons/fa";
 import { FaImage } from "react-icons/fa";
 import { HiCalendarDateRange } from "react-icons/hi2";
-
+// import { FaRegCalendarAlt } from "react-icons/fa";
 function AddLearningPlan() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -31,12 +31,12 @@ function AddLearningPlan() {
         alert(`File ${file.name} exceeds the maximum size of 50MB.`);
         return;
       }
-      
+
       if (!file.type.startsWith('image/')) {
         alert('Please upload an image file.');
         return;
       }
-      
+
       setImage(file);
       setImagePreview(URL.createObjectURL(file));
     }
@@ -157,7 +157,7 @@ function AddLearningPlan() {
         <div className="post-form-card">
           <h1 className="form-title">Create Learning Plan</h1>
           <p className="form-subtitle">Share your learning journey with the community</p>
-          
+
           <form onSubmit={handleSubmit} className="modern-form">
             <div className="form-group">
               <label className="form-label">Title</label>
@@ -170,7 +170,7 @@ function AddLearningPlan() {
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Category</label>
               <select
@@ -191,7 +191,7 @@ function AddLearningPlan() {
                 <option value="Fusion Recipes">Fusion Recipes</option>
               </select>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Description</label>
               <textarea
@@ -203,7 +203,7 @@ function AddLearningPlan() {
                 rows={4}
               />
             </div>
-            
+
             <div className="form-group date-range-container">
               <div className="date-field">
                 <label className="form-label">Start Date</label>
@@ -226,7 +226,7 @@ function AddLearningPlan() {
                 />
               </div>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Template Style</label>
               <select
@@ -252,7 +252,7 @@ function AddLearningPlan() {
                 onChange={(e) => setContentURL(e.target.value)}
               />
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Tags</label>
               <div className="tags-container">
@@ -276,8 +276,8 @@ function AddLearningPlan() {
                     }
                   }}
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="tag-add-button"
                   onClick={handleAddTag}
                 >
@@ -285,15 +285,15 @@ function AddLearningPlan() {
                 </button>
               </div>
             </div>
-            
+
             <div className="form-group">
               <label className="form-label">Featured Image</label>
-              <div 
+              <div
                 className={`media-drop-area ${imagePreview ? 'has-preview' : ''}`}
                 onDragOver={(e) => {
                   e.preventDefault();
                 }}
-                onDragLeave={() => {}}
+                onDragLeave={() => { }}
                 onDrop={(e) => {
                   e.preventDefault();
                   handleImageChange(e);
@@ -414,9 +414,9 @@ function AddLearningPlan() {
                 </div>
               </div>
             </div>
-            
-            <button type="submit" className="submit-button" style={{ 
-              background: "linear-gradient(90deg, #6366f1, #8b5cf6)" 
+
+            <button type="submit" className="submit-button" style={{
+              background: "linear-gradient(90deg, #6366f1, #8b5cf6)"
             }} disabled={isSubmitting}>
               <span className="button-text">{isSubmitting ? 'Creating...' : 'Create Learning Plan'}</span>
               <span className="button-icon">→</span>
