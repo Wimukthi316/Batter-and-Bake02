@@ -129,7 +129,7 @@ function UpdateLearningPost() {
         return;
       }
     }
-
+    // Use the existing image URL if no new image is uploaded
     const updatedPost = { title, description, contentURL, tags, imageUrl, postOwnerID: localStorage.getItem('userID'), templateID, startDate, endDate, category };
     try {
       await axios.put(`http://localhost:8080/learningPlan/${id}`, updatedPost);
