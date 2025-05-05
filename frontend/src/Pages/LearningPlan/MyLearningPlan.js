@@ -128,6 +128,7 @@ function MyLearningPlan() {
                 </div>
                 
               </div>
+              
               {post.postOwnerID === localStorage.getItem('userID') && (
                 <div className='action_btn_icon_post'>
                   <FaEdit
