@@ -86,8 +86,7 @@ function AddAchievements() {
     setImage(null);
     setImagePreview(null);
   };
-
-  
+ 
   return (
     <div className="post-creation-page">
       <NavBar />
