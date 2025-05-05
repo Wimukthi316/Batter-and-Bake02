@@ -126,9 +126,9 @@ function MyLearningPlan() {
                 <div className='name_section_post'>
                   <p className='name_section_post_owner_name'>{post.postOwnerName}</p>
                 </div>
-                
+
               </div>
-              
+
               {post.postOwnerID === localStorage.getItem('userID') && (
                 <div className='action_btn_icon_post'>
                   <FaEdit
@@ -181,7 +181,7 @@ function MyLearningPlan() {
                 <div className='name_section_post'>
                   <p className='name_section_post_owner_name'>{post.postOwnerName}</p>
                 </div>
-                
+
               </div>
               {post.postOwnerID === localStorage.getItem('userID') && (
                 <div className='action_btn_icon_post'>
@@ -260,5 +260,6 @@ function MyLearningPlan() {
     </div>
   );
 }
+
 
 export default MyLearningPlan;
