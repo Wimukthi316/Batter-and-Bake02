@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Toasted Bread</title>
+  <!-- Bread Outline -->
+  <path
+    d="M12,12 C12,6 20,2 32,2 C44,2 52,6 52,12 C58,14 60,20 60,28 C60,46 52,58 32,58 C12,58 4,46 4,28 C4,20 6,14 12,12 Z"
+    fill="#f4e2b5"
+    stroke="#8b5e3c"
+    stroke-width="2"
+  />
+  <!-- Toast top shading -->
+  <path
+    d="M12,12 C12,7 20,4 32,4 C44,4 52,7 52,12"
+    fill="#e0c187"
+  />
+  <!-- Texture dots -->
+  <circle cx="24" cy="24" r="1.5" fill="#8b5e3c"/>
+  <circle cx="36" cy="20" r="1.2" fill="#8b5e3c"/>
+  <circle cx="28" cy="30" r="1" fill="#8b5e3c"/>
+</svg>
+    <!-- Toast bottom shading -->
+    <path
+        d="M4,28 C4,46 12,58 32,58 C52,58 60,46 60,28"
+        fill="#d1b78c"
+    />
+    <!-- Toast bottom texture -->
+    <circle cx="16" cy="40" r="1.5" fill="#8b5e3c"/>
+    <circle cx="48" cy="36" r="1.2" fill="#8b5e3c"/>
