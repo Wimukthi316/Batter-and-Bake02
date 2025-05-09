@@ -44,6 +44,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-lg);
+  padding-top: 50px;
 }
 
 /* Search and create button */
@@ -100,6 +101,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--spacing-xl);
+  padding-top: 180px;
 }
 
 /* Empty state */

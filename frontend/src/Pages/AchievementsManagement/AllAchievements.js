@@ -89,7 +89,7 @@ function AllAchievements() {
           </button>
         </div>
         
-        <div className="posts-grid">
+        <div className="posts-grid ">
           {filteredData.length === 0 ? (
             <div className="empty-state">
               <div className="empty-icon"></div>
