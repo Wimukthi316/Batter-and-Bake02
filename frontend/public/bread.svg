@@ -1,27 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Toasted Bread</title>
-  <!-- Bread Outline -->
-  <path
-    d="M12,12 C12,6 20,2 32,2 C44,2 52,6 52,12 C58,14 60,20 60,28 C60,46 52,58 32,58 C12,58 4,46 4,28 C4,20 6,14 12,12 Z"
-    fill="#f4e2b5"
-    stroke="#8b5e3c"
-    stroke-width="2"
-  />
-  <!-- Toast top shading -->
-  <path
-    d="M12,12 C12,7 20,4 32,4 C44,4 52,7 52,12"
-    fill="#e0c187"
-  />
-  <!-- Texture dots -->
-  <circle cx="24" cy="24" r="1.5" fill="#8b5e3c"/>
-  <circle cx="36" cy="20" r="1.2" fill="#8b5e3c"/>
-  <circle cx="28" cy="30" r="1" fill="#8b5e3c"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>Birthday Cake</title>
+  
+  <!-- Cake plate -->
+  <ellipse cx="100" cy="180" rx="80" ry="10" fill="#d3d3d3" stroke="#a9a9a9" stroke-width="1"/>
+  
+  <!-- Bottom cake layer -->
+  <path d="M30,180 C30,160 40,145 100,145 C160,145 170,160 170,180" fill="#f9c6c6" stroke="#e57373" stroke-width="1"/>
+  
+  <!-- Middle cake layer -->
+  <path d="M40,145 C40,125 50,110 100,110 C150,110 160,125 160,145" fill="#fff59d" stroke="#ffd54f" stroke-width="1"/>
+  
+  <!-- Top cake layer -->
+  <path d="M50,110 C50,90 60,75 100,75 C140,75 150,90 150,110" fill="#a5d6a7" stroke="#66bb6a" stroke-width="1"/>
+  
+  <!-- Frosting decorations -->
+  <path d="M30,180 C30,175 40,170 50,175 C60,180 70,175 80,170 C90,175 100,180 110,175 C120,170 130,175 140,180 C150,175 160,170 170,175 C170,180 170,180 170,180" fill="none" stroke="#e57373" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M40,145 C40,140 50,135 60,140 C70,145 80,140 90,135 C100,140 110,145 120,140 C130,135 140,140 150,145 C160,140 160,140 160,145" fill="none" stroke="#ffd54f" stroke-width="3" stroke-linecap="round"/>
+  
+  <path d="M50,110 C50,105 60,100 70,105 C80,110 90,105 100,100 C110,105 120,110 130,105 C140,100 150,105 150,110" fill="none" stroke="#66bb6a" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Candles -->
+  <rect x="70" y="55" width="4" height="20" fill="#ff8a65" stroke="#e64a19" stroke-width="0.5"/>
+  <rect x="100" y="45" width="4" height="30" fill="#ff8a65" stroke="#e64a19" stroke-width="0.5"/>
+  <rect x="130" y="55" width="4" height="20" fill="#ff8a65" stroke="#e64a19" stroke-width="0.5"/>
+  
+  <!-- Flames -->
+  <path d="M72,55 C72,50 70,48 72,45 C74,48 72,50 72,55" fill="#ffeb3b" stroke="#fbc02d" stroke-width="0.5"/>
+  <path d="M102,45 C102,38 98,35 102,30 C106,35 102,38 102,45" fill="#ffeb3b" stroke="#fbc02d" stroke-width="0.5"/>
+  <path d="M132,55 C132,50 130,48 132,45 C134,48 132,50 132,55" fill="#ffeb3b" stroke="#fbc02d" stroke-width="0.5"/>
+  
+  <!-- Sprinkles -->
+  <circle cx="60" cy="90" r="2" fill="#f06292"/>
+  <circle cx="80" cy="95" r="2" fill="#42a5f5"/>
+  <circle cx="100" cy="85" r="2" fill="#ffee58"/>
+  <circle cx="120" cy="95" r="2" fill="#66bb6a"/>
+  <circle cx="140" cy="90" r="2" fill="#7e57c2"/>
+  
+  <circle cx="50" cy="125" r="2" fill="#7e57c2"/>
+  <circle cx="70" cy="130" r="2" fill="#f06292"/>
+  <circle cx="90" cy="120" r="2" fill="#66bb6a"/>
+  <circle cx="110" cy="130" r="2" fill="#ffee58"/>
+  <circle cx="130" cy="125" r="2" fill="#42a5f5"/>
+  <circle cx="150" cy="130" r="2" fill="#f06292"/>
+  
+  <circle cx="40" cy="160" r="2" fill="#42a5f5"/>
+  <circle cx="60" cy="165" r="2" fill="#ffee58"/>
+  <circle cx="80" cy="155" r="2" fill="#7e57c2"/>
+  <circle cx="100" cy="165" r="2" fill="#66bb6a"/>
+  <circle cx="120" cy="155" r="2" fill="#f06292"/>
+  <circle cx="140" cy="165" r="2" fill="#42a5f5"/>
+  <circle cx="160" cy="160" r="2" fill="#ffee58"/>
 </svg>
-    <!-- Toast bottom shading -->
-    <path
-        d="M4,28 C4,46 12,58 32,58 C52,58 60,46 60,28"
-        fill="#d1b78c"
-    />
-    <!-- Toast bottom texture -->
-    <circle cx="16" cy="40" r="1.5" fill="#8b5e3c"/>
-    <circle cx="48" cy="36" r="1.2" fill="#8b5e3c"/>
